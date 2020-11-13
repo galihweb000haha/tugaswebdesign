@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FA-SHOP | SINGLE BLOG</title>
+	<link rel="stylesheet" type="text/css" href="assets/font/fontawesome-free/css/all.min.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<style type="text/css">
+		#checkout{
+			padding: 120px 100px 20px 100px;
+			display: flex;
+		}
+		#checkout h2, h3{
+			margin: 20px 0;
+		}
+		#checkout .form-left label{
+			font-size: 15px;
+
+		}
+		#checkout .form-left input{
+			display: block;
+			padding: 10px 10px;
+			transition: .04s;
+			margin: 10px 0;
+			font-size: 15px;
+			box-sizing: border-box;
+			width: 100%;
+
+		}
+		#checkout .form-left li{
+			list-style: none;			
+		}
+		#checkout .form-left li:first-child{
+			display: inline-block;
+			width: 49%;
+
+		}
+		#checkout .form-left li:nth-child(2){
+			display: inline-block;
+			/*margin-left: 20px;*/
+			width: 50%;
+
+		}
+		#checkout .form-left input:focus{
+			border: 2px solid lightblue;
+		}
+		#checkout .form-left{
+			flex: 2;
+			/*border: 1px solid red;*/
+			padding: 0 20px;
+
+		}
+		#checkout .form-right{
+			flex: 1;
+			box-shadow: 0px 0px 3px 0px #ddd;
+			padding: 0 20px;
+		}
+		#checkout .form-right table{
+			width: 100%;
+		}
+		#checkout .form-right table td{
+			height: 50px;
+			border-bottom: 1px solid #707070;
+		}
+		#checkout .form-right input{
+			margin-right: 10px;
+		}
+		#checkout .form-right ul li{
+			list-style: none;
+			margin-top: 20px;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.btnorder{
+			padding: 0 10px;
+			height: 40px;
+			cursor: pointer;
+			text-align: center;
+			line-height: 40px;
+			font-weight: bold;
+			color: #ddd;
+			background-color: #4f4789;
+			font-size: 15px;
+			margin: 20px 0;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<div class="head-left">
+			<h2 onclick=document.location.href='index.html' id="sitename"><i class="fas fa-shopping-cart"></i>&nbsp;Fa-SHop</h2>
+
+			<ul>
+				<li><a id="shopMenu">Shop&nbsp;&nbsp;<i class="fas fa-caret-down"></i></a></li>
+				<li><a href="about.html">Pages&nbsp;&nbsp;<i class="fas fa-caret-down"></i></a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>	
+		</div>
+							
+		<div class="head-right" id="head-right">
+			<ul id="link-right">
+				<li onclick="document.location.href='checkout.html'"><a href="#"><i class="fas fa-shopping-cart"></i><span> Cart</span></a></li>
+				<li id="login-toggle"><a href="#"><i class="fas fa-user"></i><span> login</span></a></li>
+			</ul>	
+			
+			<div class="menu" id="menu"><i class="fas fa-bars"></i></div>
+		</div>
+		
+	</header>
+	<div id="dropDown-shop">
+		<div id="women-shop">
+			<ul>
+				<li>Women's Collection</li>
+				<li>Dresses</li>
+				<li>Bloueses & Shirts</li>
+				<li>T-Shirts</li>
+				<li>Rompers</li>
+				<li>Bras & Panties</li>
+			</ul>
+		</div>
+		<div id="men-shop">
+			<ul>
+				<li>Men's Collection</li>
+				<li>T-Shirts</li>
+				<li>Polo</li>
+				<li>Shirts</li>
+				<li>Jackets</li>
+				<li>Trench</li>
+			</ul>
+		</div>
+		<div id="kid-shop">
+			<ul>
+				<li>Kid's Collection</li>
+				<li>Dresses</li>
+				<li>Shirts</li>
+				<li>T-Shirts</li>
+				<li>Jackets</li>
+				<li>Trench</li>
+			</ul>
+		</div>
+		<div id="img-shop">
+			<div>
+				<img src="assets/img/categories/bg-4.jpg">				
+			</div>
+		</div>
+	</div>
+	<div class="sidebar" id="sidebar">
+		<div id="sidebar-head">
+			<h2 onclick=document.location.href='index.html' id="sitename"><i class="fas fa-shopping-cart"></i>&nbsp;Fa-SHop</h2>
+			<span id="close-sidebar"><i class="fas fa-times"></i></span>			
+		</div>
+		<div id="sidebar-body">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#" id="login-toggle">Login</a></li>
+			</ul>			
+		</div>
+	</div>
+	<div id="checkout">
+		<div class="form-left">
+			<h2>Billing Address</h2>
+			<form>
+				<ul>
+					<li>
+						<label for="fname">First name*</label>
+						<input type="text" name="fname" id="fname">					
+					</li>
+					<li>
+						<label for="lname">Last name*</label>			
+						<input type="text" name="lname" id="lname">
+					</li>
+					<li>
+						<label for="company">Company name (optional)</label>
+						<input type="text" name="company" id="company">
+					</li>
+					<li>
+						<label for="address">Address*</label>
+						<input type="text" name="address" id="address">
+					</li>
+					<li>
+						<label for="phone">Phone no*</label>
+						<input type="text" name="phone" id="phone">
+					</li>
+					<li>
+						<label for="email">Email address*</label>
+						<input type="text" name="email" id="email">
+					</li>
+				</ul>							
+			</form>
+		</div>
+		<div class="form-right">
+			<h2>Your order</h2>
+			<table cellpadding="10" cellspacing="0" border="0">
+				<tr>
+					<td>PRODUCT</td>
+					<td align="right">TOTAL</td>
+				</tr>	
+				<tr>
+					<td>JASND NIPPON</td>
+					<td align="right">$89.00</td>
+				</tr>
+				<tr>
+					<td>SUBTOTAL</td>
+					<td align="right">$89.00</td>
+				</tr>
+				<tr>
+					<td>TOTAL</td>
+					<td align="right">$89.00</td>
+				</tr>
+			</table>
+			<h3>Payment method</h3>
+			<ul>
+				<li><input type="radio" name="payment">PAYPAL</li>
+				<li><input type="radio" name="payment">DANA</li>
+				<li><input type="radio" name="payment">CASH ON DELIEVERY</li>				
+				<li><input type="radio" name="payment">CREDIT CARD</li>
+
+			</ul>
+			<div class="btnorder">ORDER NOW</div>
+			<div id="viewMore"></div>
+		</div>
+		
+	</div>
+	<div id="brands">
+		<div class="brands"><img src="assets/img/brands/brand1.png"></div>
+		<div class="brands"><img src="assets/img/brands/brand2.png"></div>
+		<div class="brands"><img src="assets/img/brands/brand3.png"></div>
+		<div class="brands"><img src="assets/img/brands/brand4.png"></div>
+		<div class="brands"><img src="assets/img/brands/brand5.png"></div>
+		<div class="brands"><img src="assets/img/brands/brand6.png"></div>
+	</div>	
+	<!-- footer -->
+	<footer class="footer-distributed">
+	            <div class="footer-left">
+	                <h3>Fa-SHOP</h3>
+	                <p class="footer-links">
+	                    <a href="<?=base_url('home')?>">SHOP</a>
+	                    ·
+	                    <a href="<?=base_url('home/faq')?>">BLOG</a>
+	                    ·
+	                    <a href="<?=base_url('home/disclaimer')?>">CONTACT</a>
+	                    ·
+	                    <a href="#" id="login-toggle-alt">LOGIN</a>
+	                    
+	                    
+	                </p>
+	                <p class="footer-company-name flow-text">Copyright &copy; 2020 | fa-shop.com</p>
+	            </div>
+	            <div class="footer-center">
+	                <div>
+	                    <i class="fas fa-fw fa-map-marker"></i>
+	                    <p>Tegal, Jawa Tengah, Indonesia</p>
+	                </div>
+	                <div>
+	                    <i class="fas fa-phone"></i>
+	                    <p>+6289-8667-6180</p>
+	                </div>
+	                <div>
+	                    <i class="fas fa-envelope"></i>
+	                    <p><a href="mailto:galih11120@gmail.com">Send Email</a></p>
+	                </div>
+	            </div>
+	            <div class="footer-right">
+	                <p class="footer-company-about">
+	                    <span>About Us</span>
+	                     Currently FA-SHOP is the best online shopping site in the world after Shopee and Tokopedia.
+						 Let's support us by continuing enjoy our service and sending comments and suggestions.
+	                </p>
+	                <div class="footer-icons">
+	                    <a href="#"><img src="assets/icon/facebook-f-brands.svg" style="width: 10px;filter: invert(1);"></a>
+	                    <a href="#"><img src="assets/icon/instagram-brands.svg" style="width: 15px;filter: invert(1);"></a>
+	                    <a href="#"><img src="assets/icon/twitter-brands.svg" style="width: 15px;filter: invert(1);"></i></a>
+	                    <a href="#"><img src="assets/icon/tiktok-brands.svg" style="width: 15px;filter: invert(1);"></i></a>
+	                </div>
+	            </div>
+	        </footer>
+	<!-- end-footer -->
+
+
+
+
+	<div id="containerModal" class="hidden">
+		<div id="modalLogin">
+			<span id="closeModalButton"><i class="fas fa-times"></i></span>
+			<h2>LOGIN</h2>
+			<div id="login-img">
+				PICTURE
+			</div>
+			<form>
+				<input type="text" name="username" placeholder="Username">
+				<input type="password" name="password" placeholder="Password">
+				<div id="login-btn">LOGIN</div>
+				<center>
+					<a href="#">Forgot username/password</a><br>
+					<a href="#">Create your account</a>	
+				</center>
+				
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>
+
